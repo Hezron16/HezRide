@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HezRide - Transportation App</title>
+</head>
+<body>
+    <header>
+        <h1>HezRide</h1>
+        <img src="logo.png" width="150" height="150">
+        <p><em>Safe, easy, and convenient transportation</em></p>
+
+        <nav>
+            <a href="#book">Book a Ride</a> |
+            <a href="#fleet">Our Vehicles</a> |
+            <a href="#media">Media</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="book">
+            <h2>Book a Ride</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+                    <p>
+                        <label for="fullname">Fullname:</label><br>
+                        <input type="text" id="fullname" name="fullname"
+                            placeholder="Enter your full name" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone"
+                            placeholder="09XXXXXXXXX" required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"
+                            placeholder="example@gmail.com" required>
+                    </p>
+                     <p>
+                        <label for="pickup">Pick-up Location:</label><br>
+                        <input type="text" id="pickup" name="pickup"
+                            list="places" placeholder="Choose a place" required>
+                    </p>
+                    <datalist id="places">
+                        <option value="Central Terminal">
+                        <option value="City Hall">
+                        <option value="Airport">
+                        <option value="University Campus">
+                        <option value="Public Market">
+                        <option value="SM">
+                        <option value="Park">
+                    </datalist>
+                    <p>
+                        <label for="dropoff">Drop-off Location:</label><br>
+                        <input type="text" id="dropoff" name="dropoff"
+                            list="places" placeholder="Choose a place" required>
+                    </p>
+                     <p>
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date" required>
+                    </p>
+                    <p>
+                        <label for="time">Time:</label><br>
+                        <input type="time" id="time" name="time" required>
+                    </p>
+                    <p>
+                        <label for="passengers">Passengers:</label><br>
+                        <input type="number" id="passengers" name="passengers"
+                            min="1" max="10" value="1">
+                    </p>
+                      <p>
+                        <label for="vehicle">Vehicle Type:</label><br>
+                        <select id="vehicle" name="vehicle">
+                            <option value="taxi">Taxi</option>
+                            <option value="van">Van</option>
+                            <option value="shuttle">Shuttle Bus</option>                          
+                        </select>
+                    </p>
+                    <p>
+                        <strong>Payment Method:</strong><br>
+                        <input type="radio" id="cash" name="payment" value="cash" checked>
+                        <label for="cash">Cash</label><br>
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Card</label><br>
+
+                        <input type="radio" id="ewallet" name="payment" value="ewallet">
+                        <label for="ewallet">E-Wallet</label>
+                    </p>
+                     <p>
+                        <strong>Extras:</strong><br>
+                        <input type="checkbox" id="luggage" name="extras" value="luggage">
+                        <label for="luggage">Extra luggage</label><br>
+                        <input type="checkbox" id="childseat" name="extras" value="childseat">
+                        <label for="childseat">Child seat</label><br>
+                        <input type="checkbox" id="wheelchair" name="extras" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+                    <p>
+                        <label for="notes">Notes for the driver:</label><br>
+                        <textarea id="notes" name="notes" rows="5" cols="40"
+                            placeholder="Enter your notes here"></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I agree to the
+                            <a href="#terms-info">Terms & Conditions</a>
+                        </label>
+                    </p>
+                    <input type="submit" value="Book Now">
+                    <input type="reset" value="Clear">
+                </fieldset>
+
+            </form>
+            <hr>
+
+        </section>
+         <section id="fleet">
+            <h2>Our Vehicles</h2>
+            <figure>
+                <img src="taxi.png"
+                    alt="Taxi vehicle" width="400" height="250">
+                <figcaption>
+                    <strong>Taxi</strong> - Comfortable transportation for small groups.
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="van.png"
+                    alt="Van vehicle" width="400" height="250">
+                <figcaption>
+                    <strong>Van</strong> - Spacious transportation for families and groups.
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="bus.png"
+                    alt="Shuttle bus vehicle" width="400" height="250">
+                <figcaption>
+                    <strong>Shuttle Bus</strong> - Good for larger groups and daily trips.
+                </figcaption>
+            </figure>
+            <small>You can replace the placeholder images with your own vehicle photos.</small>
+            <hr>
+        </section>
+        <section id="media">
+            <h2>Media</h2>
+
+            <h3>How HezRide Works (Video)</h3>
+
+            <video width="480" controls poster="GORIDE.mp4">
+                <source src="GORIDE.mp4" type="video/mp4">
+                <source src="GORIDE.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+                 <h3>Driver Announcement (Audio)</h3>
+            <audio controls>
+                <source src="announcement.mp3" type="audio/mpeg">
+                <source src="announcement.ogg" type="audio/ogg">
+                Your browser does not support the audio tag.
+            </audio>
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Dslod_cIhtY?si=pUbElTZ4MH29RmeU"
+                title="GoRide YouTube Video"
+                allowfullscreen>
+            </iframe>
+            <hr>
+        </section>
+         <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Daily departures from Central Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal to City Hall</td>
+                        <td>8:00 AM</td>
+                        <td>8:20 AM</td>
+                        <td>₱30</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to University</td>
+                        <td>9:00 AM</td>
+                        <td>9:30 AM</td>
+                        <td>₱40</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Airport</td>
+                        <td>10:00 AM</td>
+                        <td>10:40 AM</td>
+                        <td>₱60</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Public Market</td>
+                        <td>11:00 AM</td>
+                        <td>11:20 AM</td>
+                        <td>₱25</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Check Your Route</h3>
+            <form action="#" method="get">
+                <label for="route">Choose a route:</label><br>
+                <select id="route" name="route">
+                    <option value="cityhall">Terminal to City Hall</option>
+                    <option value="university">Terminal to University</option>
+                    <option value="airport">Terminal to Airport</option>
+                    <option value="market">Terminal to Public Market</option>
+                </select>
+                <input type="submit" value="Search">
+            </form>
+            <hr>
+        </section>
+         <section id="contact">
+            <h2>Contact & Feedback</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+                    <p>
+                        <label for="feedbackname">Name:</label><br>
+                        <input type="text" id="feedbackname"
+                            name="feedbackname" required>
+                    </p>
+                    <p>
+                        <label for="rating">Rating:</label><br>
+                        <input type="range" id="rating" name="rating"
+                            min="1" max="5" value="5">
+                    </p>
+                    <p>
+                        <label for="topic">Topic:</label><br>
+                        <select id="topic" name="topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost-item">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="feedback">Your Feedback:</label><br>
+                        <textarea id="feedback" name="feedback"
+                            rows="5" cols="40"
+                            placeholder="Write your feedback here"
+                            required></textarea>
+                    </p>
+                    <p>
+                        <label for="file">Upload an image:</label><br>
+                        <input type="file" id="file" name="file"
+                            accept="image/*">
+                    </p>
+                    <input type="submit" value="Send Feedback">
+                </fieldset>
+            </form>
+            <h3>Reach Us</h3>
+            <address>
+                GoRide Transportation<br>
+                Baguio City, Philippines<br>
+                Phone:
+                <a href="tel:+639123456789">0927 7262 593</a><br>
+                Email:
+                <a href="mailto:goride@example.com">hezronkieth@gmail.com</a>
+            </address>
+            <hr>
+        </section>
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li>
+                    <a href="https://www.openstreetmap.org/"
+                        target="_blank">OpenStreetMap</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps"
+                        target="_blank">Google Maps</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/"
+                        target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="#top">Back to top</a>
+                </li>
+            </ul>
+        </section>
+         <section id="terms-info">
+            <h2>Terms & Conditions</h2>
+            <details>
+                <summary>Read the terms</summary>
+                <ol>
+                    <li>Provide correct information when booking a ride.</li>
+                    <li>Follow the safety rules during the trip.</li>
+                    <li>Respect the driver and other passengers.</li>
+                </ol>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2026 HezRide Chupisna. All rights reserved.</p>
+    </footer>
+    </main>
+</body>
+</html>
